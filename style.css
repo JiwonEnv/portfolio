@@ -23,3 +23,36 @@ nav a {
 nav a:hover {
     color: #6d4cff;
 }
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 90vh;
+
+    text-align: center;
+}
+
+#home img {
+    width: 350px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+}
+
+#home h1 {
+    font-size: 56px;
+    margin: 10px 0;
+}
+
+#home h2 {
+    font-size: 30px;
+    color: #666;
+    margin: 0;
+}
+
+#home p {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #555;
+}
