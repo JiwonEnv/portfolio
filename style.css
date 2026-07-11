@@ -1,4 +1,25 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: "Pretendard", sans-serif;
+}
+
+header {
+    padding: 20px 60px;
+    border-bottom: 1px solid #ddd;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #6d4cff;
 }
