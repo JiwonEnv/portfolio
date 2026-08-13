@@ -3,40 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Jiwon Lee | 3D Environment Artist</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    
-<header>
-<nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-</nav>
+
+<header class="site-header">
+    <a class="logo" href="#home">JIWON LEE</a>
+
+    <nav>
+        <a href="#projects">Work</a>
+        <a href="#about">About</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
 <main>
-<section id="home">
 
-    <img src="profile.png" alt="대표 이미지">
+    <!-- 대표 영역 -->
+    <section id="home" class="hero">
 
-    <h1>이지원</h1>
+        <div class="hero-image placeholder-image">
+            <span>HERO IMAGE</span>
+        </div>
 
-    <h2>3D Environment Artist</h2>
+        <div class="hero-overlay"></div>
 
-    <p>
-        플레이 경험을 고려한 게임 환경을 제작합니다.
-    </p>
+        <div class="hero-content">
+            <p class="hero-name">JIWON LEE</p>
 
-</section>
+            <h1>3D ENVIRONMENT ARTIST</h1>
+
+            <p class="hero-description">
+                Stylized environments · Modular workflows · Real-time world building
+            </p>
+        </div>
+
+        <a class="hero-button" href="#projects">
+            VIEW PROJECTS →
+        </a>
+
+    </section>
+
+
+    <!-- 대표 프로젝트 -->
+    <section id="projects" class="projects section">
+
+        <div class="section-heading">
+            <p>PORTFOLIO</p>
+            <h2>SELECTED WORK</h2>
+        </div>
+
+        <div class="project-grid">
+
+            <article class="project-card">
+                <div class="project-image placeholder-image">
+                    <span>PROJECT IMAGE 01</span>
+                </div>
+
+                <div class="project-info">
+                    <span class="project-number">01</span>
+
+                    <div>
+                        <h3>GRIMOIRE: ONCE UPON A CRIME</h3>
+                        <p>Environment Art · Unity 6</p>
+                    </div>
+
+                    <span class="project-arrow">→</span>
+                </div>
+            </article>
+
+
+            <article class="project-card">
+                <div class="project-image placeholder-image">
+                    <span>PROJECT IMAGE 02</span>
+                </div>
+
+                <div class="project-info">
+                    <span class="project-number">02</span>
+
+                    <div>
+                        <h3>MODULAR BUILDING GENERATOR</h3>
+                        <p>Procedural Workflow · Shader</p>
+                    </div>
+
+                    <span class="project-arrow">→</span>
+                </div>
+            </article>
+
+
+            <article class="project-card">
+                <div class="project-image placeholder-image">
+                    <span>PROJECT IMAGE 03</span>
+                </div>
+
+                <div class="project-info">
+                    <span class="project-number">03</span>
+
+                    <div>
+                        <h3>UNITY 3D TEAM PROJECT</h3>
+                        <p>Environment Design · Art Direction</p>
+                    </div>
+
+                    <span class="project-arrow">→</span>
+                </div>
+            </article>
+
+
+            <article class="project-card">
+                <div class="project-image placeholder-image">
+                    <span>PROJECT IMAGE 04</span>
+                </div>
+
+                <div class="project-info">
+                    <span class="project-number">04</span>
+
+                    <div>
+                        <h3>VR SMART CITY</h3>
+                        <p>Environment Design · Unity VR</p>
+                    </div>
+
+                    <span class="project-arrow">→</span>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- 소개 -->
+    <section id="about" class="about section">
+
+        <div class="section-heading">
+            <p>PROFILE</p>
+            <h2>ABOUT</h2>
+        </div>
+
+        <div class="about-content">
+
+            <div class="about-symbol">
+                JL
+            </div>
+
+            <div class="about-text">
+                <h3>플레이 경험을 고려한 게임 환경을 제작합니다.</h3>
+
+                <p>
+                    스타일라이즈드 환경 제작을 중심으로 모델링, 텍스처링,
+                    머티리얼 제작, 레벨 배치, 라이팅 및 최적화 과정을 수행합니다.
+                </p>
+
+                <p>
+                    모듈러 에셋과 재사용 가능한 제작 시스템을 활용하여
+                    일관된 비주얼과 효율적인 환경 제작 파이프라인을 설계합니다.
+                </p>
+
+                <ul class="skill-list">
+                    <li>Blender</li>
+                    <li>ZBrush</li>
+                    <li>Substance</li>
+                    <li>Unity</li>
+                    <li>Unreal</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- 이력서 -->
+    <section id="resume" class="resume section">
+
+        <div class="section-heading">
+            <p>EXPERIENCE</p>
+            <h2>RESUME</h2>
+        </div>
+
+        <div class="resume-box">
+            <p>
+                경력, 교육, 프로젝트 역할과 사용 기술을 확인할 수 있습니다.
+            </p>
+
+            <a class="outline-button" href="#">
+                VIEW RESUME →
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- 연락처 -->
+    <section id="contact" class="contact section">
+
+        <p class="contact-label">CONTACT</p>
+
+        <h2>LET'S CREATE A WORLD.</h2>
+
+        <p>
+            프로젝트 및 채용 관련 문의는 이메일로 연락해 주세요.
+        </p>
+
+        <a class="email-link" href="mailto:your-email@example.com">
+            your-email@example.com
+        </a>
+
+        <div class="social-links">
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">ArtStation</a>
+            <a href="#" target="_blank">Notion</a>
+        </div>
+
+    </section>
+
 </main>
 
-<footer>
 
+<footer>
+    <p>© 2026 Jiwon Lee. All rights reserved.</p>
 </footer>
+
 </body>
 </html>
