@@ -1,5 +1,15 @@
 /* ================================
-   이력서 기본 설정
+   이력서 전용 색상
+================================ */
+
+:root {
+    --resume-panel: #15171c;
+    --resume-panel-alternate: #1b1e24;
+}
+
+
+/* ================================
+   기본 페이지
 ================================ */
 
 .resume-page {
@@ -7,9 +17,9 @@
 }
 
 .resume-main {
-    width: min(1180px, calc(100% - 96px));
+    width: min(1400px, calc(100% - 80px));
     margin: 0 auto;
-    padding-top: 76px;
+    padding: 76px 0 72px;
 }
 
 
@@ -27,17 +37,16 @@
 
 
 /* ================================
-   이력서 상단
+   상단 프로필
 ================================ */
 
 .resume-hero {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
-    gap: 70px;
+    align-items: end;
+    gap: 48px;
 
-    padding: 90px 0 100px;
-
-    border-bottom: 1px solid var(--line);
+    padding: 44px 0 52px;
 }
 
 .resume-back-link {
@@ -47,137 +56,134 @@
 
     color: var(--text-secondary);
 
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     letter-spacing: 2px;
-
-    transition: color 0.2s ease;
 }
 
 .resume-back-link:hover {
     color: var(--accent);
 }
 
-.resume-label {
-    margin: 0 0 18px;
-
-    color: var(--accent);
-
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 4px;
+.resume-identity {
+    display: flex;
+    align-items: center;
+    gap: 32px;
 }
 
-.resume-heading h1 {
+.resume-identity h1 {
     margin: 0;
 
     color: var(--text-primary);
 
-    font-size: clamp(58px, 9vw, 112px);
-    font-weight: 800;
-    line-height: 0.9;
-    letter-spacing: -5px;
+    font-size: clamp(42px, 5.2vw, 74px);
+    line-height: 1;
+    letter-spacing: 4px;
 }
 
-.resume-page-title {
-    margin: 32px 0 0;
+.resume-identity i {
+    width: 1px;
+    height: 40px;
+
+    background-color: var(--line);
+}
+
+.resume-identity p {
+    margin: 0;
 
     color: var(--text-secondary);
 
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 3px;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 4px;
+    white-space: nowrap;
 }
 
 .resume-actions {
     display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 18px;
-}
-
-.resume-download {
-    display: inline-flex;
     align-items: center;
-    justify-content: center;
-
-    min-width: 180px;
-    padding: 14px 22px;
-
-    color: var(--accent);
-    border: 1px solid var(--accent);
-
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    gap: 28px;
 }
 
-.disabled-download {
-    cursor: default;
-    opacity: 0.45;
-    pointer-events: none;
-}
-
-.resume-email {
+.resume-actions a {
     color: var(--text-secondary);
 
     font-size: 14px;
-
-    transition: color 0.2s ease;
 }
 
-.resume-email:hover {
+.resume-actions a:hover {
     color: var(--text-primary);
+}
+
+.resume-actions span {
+    padding: 15px 22px;
+
+    color: var(--text-primary);
+    border: 1px solid var(--accent);
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    cursor: default;
+    opacity: 0.55;
 }
 
 
 /* ================================
-   공통 섹션
+   학력·경력 공통 틀
 ================================ */
 
-.resume-content-section {
+.info-section {
     display: grid;
-    grid-template-columns: 220px minmax(0, 1fr);
-    gap: 70px;
+    grid-template-columns: 270px minmax(0, 1fr);
 
-    padding: 90px 0;
+    margin-bottom: 38px;
 
-    border-bottom: 1px solid var(--line);
+    background-color: var(--resume-panel);
+    border: 1px solid var(--line);
 }
 
-.resume-section-title {
-    position: sticky;
-    top: 115px;
-    align-self: start;
+.info-title {
+    position: relative;
+
+    padding: 32px 28px;
+
+    border-right: 1px solid var(--line);
 }
 
-.resume-section-title span {
-    display: block;
+.info-title b {
+    position: absolute;
+    top: 27px;
+    left: 22px;
 
-    margin-bottom: 10px;
+    width: 14px;
+    height: 14px;
 
-    color: var(--accent);
-
-    font-size: 13px;
-    font-weight: 800;
+    background:
+        linear-gradient(
+            135deg,
+            var(--accent) 0 50%,
+            transparent 50%
+        );
 }
 
-.resume-section-title h2 {
+.info-title h2 {
     margin: 0;
+    padding-left: 18px;
 
     color: var(--text-primary);
 
-    font-size: clamp(22px, 3vw, 32px);
-    line-height: 1.2;
+    font-size: 24px;
     letter-spacing: 2px;
 }
 
-.resume-section-title h2::after {
+.info-title::after {
     display: block;
 
-    width: 42px;
-    height: 3px;
+    width: 56px;
+    height: 2px;
     margin-top: 18px;
 
     background-color: var(--accent);
@@ -185,68 +191,74 @@
     content: "";
 }
 
-.resume-section-body {
-    min-width: 0;
-}
-
 
 /* ================================
    학력
 ================================ */
 
-.resume-list {
+.education-row {
     display: grid;
-    gap: 20px;
+    grid-template-columns:
+        90px
+        minmax(0, 1fr)
+        110px
+        170px;
+    align-items: center;
+
+    min-height: 88px;
+    padding: 0 28px;
+
+    border-bottom: 1px solid var(--line);
 }
 
-.resume-card {
-    padding: 28px 30px;
-
-    background-color: var(--surface);
-    border: 1px solid var(--line);
-
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease;
+.education-row:last-child {
+    border-bottom: 0;
 }
 
-.resume-card:hover {
-    transform: translateY(-3px);
+.edu-icon {
+    color: var(--accent);
 
-    border-color: var(--accent);
+    font-size: 34px;
+    line-height: 1;
 }
 
-.resume-card h3 {
-    margin: 0 0 12px;
+.education-row h3,
+.timeline-row h3 {
+    margin: 0;
 
     color: var(--text-primary);
 
-    font-size: clamp(19px, 2vw, 25px);
+    font-size: 17px;
     line-height: 1.45;
+}
+
+.education-row time,
+.timeline-row time {
+    color: var(--text-secondary);
+
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
 }
 
 
 /* ================================
-   정보 표시
+   상태 및 분류 태그
 ================================ */
 
-.resume-category {
-    margin: 0 0 5px;
+.education-row em,
+.timeline-row em {
+    justify-self: start;
 
-    color: var(--text-secondary);
-
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.resume-date {
-    margin: 0;
+    padding: 5px 12px;
 
     color: var(--accent);
+    border: 1px solid rgba(154, 124, 255, 0.65);
 
-    font-size: 13px;
+    font-size: 12px;
+    font-style: normal;
     font-weight: 700;
-    letter-spacing: 0.5px;
+    white-space: nowrap;
 }
 
 
@@ -254,152 +266,116 @@
    경력 타임라인
 ================================ */
 
-.experience-timeline {
+.timeline-list {
     position: relative;
 }
 
-.experience-timeline::before {
+.timeline-list::before {
     position: absolute;
-    top: 10px;
-    bottom: 10px;
-    left: 7px;
+    top: 0;
+    bottom: 0;
+    left: 210px;
 
-    width: 1px;
+    width: 2px;
 
-    background-color: var(--line);
+    background-color: var(--accent);
 
     content: "";
 }
 
-.timeline-entry {
+.timeline-row {
+    display: grid;
+    grid-template-columns:
+        185px
+        50px
+        minmax(0, 1fr)
+        150px;
+    align-items: center;
+
+    min-height: 84px;
+    padding: 0 28px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.035);
+}
+
+.timeline-row:nth-child(even) {
+    background-color: var(--resume-panel-alternate);
+}
+
+.timeline-row:last-child {
+    border-bottom: 0;
+}
+
+.timeline-row i {
     position: relative;
+    z-index: 1;
 
-    padding: 0 0 30px 44px;
-}
+    justify-self: center;
 
-.timeline-entry:last-child {
-    padding-bottom: 0;
-}
-
-.timeline-marker {
-    position: absolute;
-    top: 30px;
-    left: 0;
-
-    width: 15px;
-    height: 15px;
+    width: 18px;
+    height: 18px;
 
     background-color: var(--background);
     border: 3px solid var(--accent);
-    border-radius: 50%;
 
-    box-shadow: 0 0 0 6px var(--background);
+    box-shadow: 0 0 0 5px var(--resume-panel);
 }
 
-.timeline-card {
-    padding: 28px 30px;
-
-    background-color: var(--surface);
-    border: 1px solid var(--line);
-
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease;
-}
-
-.timeline-card:hover {
-    transform: translateY(-3px);
-
-    border-color: var(--accent);
-}
-
-.timeline-card h3 {
-    margin: 0 0 12px;
-
-    color: var(--text-primary);
-
-    font-size: clamp(19px, 2vw, 25px);
-    line-height: 1.45;
+.timeline-row:nth-child(even) i {
+    box-shadow:
+        0 0 0 5px var(--resume-panel-alternate);
 }
 
 
 /* ================================
-   연락처
+   하단
 ================================ */
 
-.resume-contact {
-    padding: 130px 0;
-
-    text-align: center;
-}
-
-.resume-contact > p {
-    margin: 0;
-
-    color: var(--accent);
-
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 4px;
-}
-
-.resume-contact h2 {
-    margin: 20px 0;
-
-    color: var(--text-primary);
-
-    font-size: clamp(38px, 7vw, 76px);
-    line-height: 1.1;
-}
-
-.resume-contact a {
-    display: inline-block;
-
-    margin-top: 10px;
-
-    color: var(--text-secondary);
-
-    font-size: clamp(17px, 2vw, 23px);
-
-    transition: color 0.2s ease;
-}
-
-.resume-contact a:hover {
-    color: var(--accent);
+footer {
+    border-top: 1px solid var(--line);
 }
 
 
 /* ================================
-   태블릿
+   작은 데스크톱·태블릿
 ================================ */
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
 
     .resume-main {
         width: calc(100% - 48px);
-        padding-top: 68px;
     }
 
     .resume-hero {
         grid-template-columns: 1fr;
-        gap: 42px;
-
-        padding: 65px 0 75px;
     }
 
     .resume-actions {
-        align-items: flex-start;
+        justify-content: space-between;
     }
 
-    .resume-content-section {
-        grid-template-columns: 1fr;
-        gap: 50px;
-
-        padding: 75px 0;
+    .info-section {
+        grid-template-columns: 210px minmax(0, 1fr);
     }
 
-    .resume-section-title {
-        position: static;
+    .education-row {
+        grid-template-columns:
+            64px
+            minmax(0, 1fr)
+            90px
+            145px;
+    }
+
+    .timeline-list::before {
+        left: 174px;
+    }
+
+    .timeline-row {
+        grid-template-columns:
+            150px
+            48px
+            minmax(0, 1fr)
+            120px;
     }
 
 }
@@ -409,61 +385,132 @@
    모바일
 ================================ */
 
-@media (max-width: 620px) {
+@media (max-width: 760px) {
 
     .resume-main {
         width: calc(100% - 32px);
+        padding-top: 68px;
     }
 
-    .resume-hero {
-        gap: 35px;
-
-        padding: 48px 0 60px;
+    .resume-identity {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
     }
 
-    .resume-heading h1 {
-        font-size: clamp(45px, 16vw, 68px);
-        letter-spacing: -2px;
+    .resume-identity i {
+        width: 48px;
+        height: 1px;
     }
 
-    .resume-page-title {
-        margin-top: 24px;
-
-        font-size: 12px;
-        letter-spacing: 2px;
+    .resume-identity p {
+        white-space: normal;
     }
 
-    .resume-content-section {
-        gap: 42px;
-
-        padding: 60px 0;
+    .resume-actions {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
     }
 
-    .resume-card {
-        padding: 22px 20px;
+    .info-section {
+        grid-template-columns: 1fr;
     }
 
-    .experience-timeline::before {
-        left: 6px;
+    .info-title {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
     }
 
-    .timeline-entry {
-        padding: 0 0 24px 34px;
+    .education-row {
+        grid-template-columns:
+            44px
+            minmax(0, 1fr)
+            auto;
+        gap: 12px;
+
+        padding: 20px;
     }
 
-    .timeline-marker {
-        top: 25px;
-
-        width: 13px;
-        height: 13px;
+    .education-row time {
+        grid-column: 2 / -1;
     }
 
-    .timeline-card {
-        padding: 22px 20px;
+    .timeline-list::before {
+        left: 31px;
     }
 
-    .resume-contact {
-        padding: 90px 0;
+    .timeline-row {
+        grid-template-columns:
+            36px
+            minmax(0, 1fr)
+            auto;
+        gap: 12px;
+
+        min-height: 0;
+        padding: 22px 18px;
+    }
+
+    .timeline-row i {
+        grid-column: 1;
+        grid-row: 1 / 4;
+    }
+
+    .timeline-row h3 {
+        grid-column: 2 / -1;
+    }
+
+    .timeline-row em {
+        grid-column: 2;
+    }
+
+    .timeline-row time {
+        grid-column: 2 / -1;
+        grid-row: 3;
+    }
+
+}
+
+
+/* ================================
+   작은 모바일
+================================ */
+
+@media (max-width: 520px) {
+
+    .site-header {
+        padding: 0 16px;
+    }
+
+    .site-header nav {
+        gap: 14px;
+    }
+
+    .site-header nav a {
+        font-size: 11px;
+    }
+
+    .education-row {
+        grid-template-columns:
+            34px
+            minmax(0, 1fr);
+    }
+
+    .education-row em,
+    .education-row time {
+        grid-column: 2;
+    }
+
+    .timeline-row {
+        grid-template-columns:
+            30px
+            minmax(0, 1fr);
+    }
+
+    .timeline-row h3,
+    .timeline-row em,
+    .timeline-row time {
+        grid-column: 2;
     }
 
 }
