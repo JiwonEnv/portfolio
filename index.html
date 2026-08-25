@@ -114,88 +114,32 @@
     </section>
 
     <!-- 대표 프로젝트 -->
-    <section id="projects" class="projects section">
+<section id="projects" class="projects section">
 
-        <div class="section-heading">
-            <p>PORTFOLIO</p>
-            <h2>SELECTED WORK</h2>
-        </div>
+    <div class="section-heading">
+        <p>PORTFOLIO</p>
+        <h2>SELECTED WORK</h2>
+    </div>
 
-        <div class="project-grid">
+    <!-- 대표 프로젝트가 자동으로 들어가는 영역 -->
+    <div
+        class="project-grid"
+        data-project-list="featured"
+    ></div>
 
-            <a class="project-card" href="projects/grimoire.html">
-                <div class="project-image placeholder-image">
-                    <span>PROJECT IMAGE 01</span>
-                </div>
+    <!-- 전체 프로젝트 페이지 이동 버튼 -->
+    <div class="project-list-action">
 
-                <div class="project-info">
-                    <span class="project-number">01</span>
+        <a
+            class="outline-button"
+            href="work.html"
+        >
+            전체 프로젝트 보기 →
+        </a>
 
-                    <div>
-                        <h3>GRIMOIRE: ONCE UPON A CRIME</h3>
-                        <p>Environment Art · Unity 6</p>
-                    </div>
+    </div>
 
-                    <span class="project-arrow">→</span>
-                </div>
-            </a>
-
-
-            <article class="project-card">
-                <div class="project-image placeholder-image">
-                    <span>PROJECT IMAGE 02</span>
-                </div>
-
-                <div class="project-info">
-                    <span class="project-number">02</span>
-
-                    <div>
-                        <h3>MODULAR BUILDING GENERATOR</h3>
-                        <p>Procedural Workflow · Shader</p>
-                    </div>
-
-                    <span class="project-arrow">→</span>
-                </div>
-            </article>
-
-
-            <article class="project-card">
-                <div class="project-image placeholder-image">
-                    <span>PROJECT IMAGE 03</span>
-                </div>
-
-                <div class="project-info">
-                    <span class="project-number">03</span>
-
-                    <div>
-                        <h3>UNITY 3D TEAM PROJECT</h3>
-                        <p>Environment Design · Art Direction</p>
-                    </div>
-
-                    <span class="project-arrow">→</span>
-                </div>
-            </article>
-
-
-            <article class="project-card">
-                <div class="project-image placeholder-image">
-                    <span>PROJECT IMAGE 04</span>
-                </div>
-
-                <div class="project-info">
-                    <span class="project-number">04</span>
-
-                    <div>
-                        <h3>VR SMART CITY</h3>
-                        <p>Environment Design · Unity VR</p>
-                    </div>
-
-                    <span class="project-arrow">→</span>
-                </div>
-            </article>
-
-        </div>
-    </section>
+</section>
 
 
     <!-- 연락처 -->
@@ -276,6 +220,9 @@
 <footer>
     <p>© 2026 Jiwon Lee. All rights reserved.</p>
 </footer>
+
+<script src="projects-data.js"></script>
+<script src="projects.js"></script>
 
 </body>
 </html>
